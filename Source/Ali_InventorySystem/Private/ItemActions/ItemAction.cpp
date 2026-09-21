@@ -2,3 +2,8 @@
 
 
 #include "ItemActions/ItemAction.h"
+
+bool UItemAction::Execute_Implementation(AActor* ItenOwner)
+{
+	return false;
+}

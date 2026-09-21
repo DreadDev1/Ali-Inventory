@@ -6,13 +6,11 @@
 #include "UObject/Object.h"
 #include "ItemAction.generated.h"
 
-/* Actions that will be available to Inventory Items  */
 UCLASS(Blueprintable, BlueprintType, Abstract, DefaultToInstanced, EditInlineNew)
 class ALI_INVENTORYSYSTEM_API UItemAction : public UObject
 {
 	GENERATED_BODY()
 	public:
-	
-	UFUNCTION(BlueprintImplementableEvent)
-	bool Execute(AActor* ItemOwner);
+	UFUNCTION(BlueprintNativeEvent, Category = "Item Action")
+	bool Execute(AActor* ItenOwner);
 };
