@@ -18,7 +18,6 @@ void UItemInstance::SetStatValue(FGameplayTag StatTag, float StatValue)
 void UItemInstance::Initialize(TSubclassOf<UItemDefinition> ItemDef)
 {
 	if (!ItemDef) return;
-	
 	ItemDefinition = ItemDef;
 	
 	UItemDefinition* ItemCDO = ItemDefinition.GetDefaultObject();
