@@ -5,12 +5,12 @@
 
 #include "ItemActions/ItemAction.h"
 
-bool UUsableItemFragment::Use(AActor* ItemOwner)
+bool UUsableItemFragment::Use(AActor* ItemOwner, UItemInstance* ItemInstance)
 {
 	bool bAnySucceeded = false;
 	for (const TObjectPtr<UItemAction>& Action : OnUseActions)
 	{
-		if (Action && Action->Execute(ItemOwner)) { bAnySucceeded = true; }
+		if (Action && Action->Execute(ItemOwner, ItemInstance)) { bAnySucceeded = true; }
 	}
 	return bAnySucceeded;	
 }
